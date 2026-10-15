@@ -23,16 +23,16 @@ Last week. The labor inspector gave a warning, not a fine. Workers were wearing 
 The litter from Q2, spotted by the labor inspector, not by anyone on the team.
 
 **Q4. What it cost:**
-That incident cost nothing (warning only). Over the last 4 months, the company paid about 150,000 GEL in fines in total, because workers kept repeating the same violations and the safety specialist was not always on site.
+“In the last four months we’ve paid about 150,000 GEL in fines, because the workers keep repeating the same violations and the safety specialist isn’t always on site.”
 
 **Q5. What they do today when the specialist isn't there:**
 They try to be strict with workers so the rules are followed. The safety specialist comes once every 4 days and tells workers what not to violate. Nothing is automated. (Not shown how they track it.)
 
 **Q6. Belief 1: is PPE missing, or is it habit?**
-PPE is almost always available on site. The issue is that workers are not comfortable wearing all of it.
+“PPE is almost always there on site. The problem is the workers aren’t comfortable wearing all of it.”
 
 **Q7. Belief 2: does the specialist leave a checklist?**
-Yes, the specialist always leaves a checklist of what should be done.
+“Yes, the specialist always leaves a checklist of what should be done.”
 
 ## Close
 
