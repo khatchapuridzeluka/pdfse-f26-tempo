@@ -26,6 +26,7 @@ Accountabilities below say who makes sure something happens. They do not say who
 - **Silent teammate with a deadline near:** Tekla follows up by direct message after 5 hours of silence; if no reply within 24 hours, she calls, and the rest of the team splits the work and notes it in the channel
 - **Demo-ready:** any member can screen-share the current product state in any lab, on 2 minutes notice
 - **Code changes:** nobody pushes directly to `main`; every change goes through a pull request approved by at least one other member
+- **Tracking system:** (Updated in W4) We meet after new Lab homework is assigned, Tekla writes down tasks that need to be done, then we seperate them and take the responsibilities on each task. We remind each other about deadlines and tell if we do not agree with something. Everything is tracked on Github repository, if major decision has to be made, we meed in person ASAP.
 
 ## How we decide
 
