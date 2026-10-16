@@ -1,4 +1,4 @@
-# Interview 1: Construction Worker, KIU Campus Site
+# Interview 6 · Construction worker, KIU campus site · (code name: Worker-1)
 
 | | |
 |---|---|
@@ -31,14 +31,17 @@ Learn how daily safety oversight works on an active construction site from the p
 | Inspector feedback | Given verbally, on the spot. No written follow-up described. | Weak: a single remark |
 | Cost, frequency, fine amounts | Declined as confidential company information. | None: no data gathered |
 
-## Notable quotes
-Lightly cleaned from the audio.
+## Quotes
+Word for word from the transcript of the recording, English as spoken, with timestamps. ★ = surprise.
 
-- "All of us really know the basic precautions, like putting on our helmets." (01:18)
-- "You never know when he's coming. Sometimes we do, but there are occasions where they come unannounced." (03:36)
-- "Most frequently when the investigator comes in he just takes notes and asks workers specific questions about what they do and how." (04:45)
-- "We were not fined because it was an individual error and not one that [affects] the whole company." (06:16)
-- "We control even each other. It is very encouraged to urge each other to put on our helmets." (08:43)
+- "all of us really know like basic precautions to put on our helmets" (01:18)
+- "you never know when he's coming, right? Sometimes we do, but there occasions where they come unannounced" (03:36)
+- "most frequently when the investigator comes in he just takes notes and asks specific questions about like he asks workers like what this is, how they do it" (04:45)
+- "we were not fined because it was an individual error and not some kind of one that causes all the companies" (06:16) ★
+- "we control even each other. It is very encouraged to urge each other to put on our helmets" (08:43)
+
+## Surprise ★
+A colleague caught in a violation left the company, but the company was not fined: the consequence landed on one person, not on the company. We had assumed that violations show up as company fines (Interview 2 reported about 150,000 GEL in four months).
 
 ## Prediction check
 **Inconclusive.** The interviewee did not say that compliance is fully maintained without oversight. He also gave no information on fines or how often violations occur, so the cost side of our hypothesis remains untested.
@@ -60,6 +63,6 @@ Lightly cleaned from the audio.
 4. **Keep it conversational and reach the close.** Use short follow-ups, summarise back what we heard, and leave time for "Who else should we talk to?" and "Can we contact you again?".
 
 ## Next steps
-- Prepare a worker version and a manager version of the question set, and share them with the team to merge into `inteview-script-v1.md`.
+- Use the worker and manager question sets in `interview-script-v2.md` for the next interviews.
 - Interview a site manager or the safety specialist, using the contacts on the outreach tracker and the Facebook construction groups from the ICP.
 - Record the hypothesis verdict in `DECISIONS.md` once we have cost and frequency evidence.
