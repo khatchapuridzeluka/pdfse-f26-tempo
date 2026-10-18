@@ -23,6 +23,6 @@ Each one becomes at least one question in your interview script, so you still he
 
 
 ## After interviews (fill in Week 3)
-**Verdict:** confirmed · **Evidence:** [Log 2](<interview-logs/Interview 2, Tbilisi Consturction company owner.md>), [Log 3](<interview-logs/Interview 3, Safety specialist - WK2.md>), [Log 5](<interview-logs/Interview 5, Construction team lead - WK3.md>) · Recorded in `DECISIONS.md`.
+**Verdict:** confirmed · **Evidence:** [Log 2](<interview-logs/02-Consturction company owner-Tbilisi.md>), [Log 3](<interview-logs/03-Safety specialist-Tbilisi.md>), [Log 5](<interview-logs/05-Construction team lead-Tbilisi.md>) · Recorded in `DECISIONS.md`.
 
-No interviewee said workers stay compliant without oversight: PPE isn't worn and edge fences are removed and not put back between the specialist's visits (Logs 2, 3, 5). Fines are a large, real cost: about 150,000 GEL in 4 months (Log 2).
+No interviewee said workers stay compliant without oversight: PPE isn't worn and edge fences are removed and not put back between the specialist's visits (Logs 02, 03, 05). Fines are a large, real cost: about 150,000 GEL in 4 months (Log 02).
