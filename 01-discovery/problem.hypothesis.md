@@ -23,4 +23,6 @@ Each one becomes at least one question in your interview script, so you still he
 
 
 ## After interviews (fill in Week 3)
-**Verdict:** [confirmed / weakened / killed] · **Evidence:** [links to logs] · Record the verdict in `DECISIONS.md`.
+**Verdict:** confirmed · **Evidence:** [Log 2](<interview-logs/Interview 2, Tbilisi Consturction company owner.md>), [Log 3](<interview-logs/Interview 3, Safety specialist - WK2.md>), [Log 5](<interview-logs/Interview 5, Construction team lead - WK3.md>) · Recorded in `DECISIONS.md`.
+
+No interviewee said workers stay compliant without oversight: PPE isn't worn and edge fences are removed and not put back between the specialist's visits (Logs 2, 3, 5). Fines are a large, real cost: about 150,000 GEL in 4 months (Log 2).
