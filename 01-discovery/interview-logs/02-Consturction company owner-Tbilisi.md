@@ -1,6 +1,6 @@
 # Interview Log 2
 
-**Interviewee:** Owner of a mid-sized construction company (Tbilisi)
+**Interviewee:** Owner of a mid-sized construction company (Tbilisi) · **Code name:** Owner-1
 
 **Interviewer:** Luka Khachapuridze
 
@@ -47,6 +47,8 @@ Yes, the specialist always leaves a checklist of what should be done.
 - **Belief 1 is wrong:** PPE is available; the problem is workers choosing not to wear it (comfort/habit).
 - **Belief 2 is wrong:** guidance exists (checklist); the gap is that nobody makes sure it is followed between visits.
 - **Prediction holds so far:** compliance slips without oversight, and fines are a large, real cost.
+
+**Surprise ★:** Both beliefs we set aside were wrong: PPE is on site and the specialist does leave a checklist. And the latest warning was for litter, while every worker wore full PPE.
 
 ## Ask next time
 

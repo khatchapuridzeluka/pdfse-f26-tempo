@@ -1,6 +1,6 @@
 # Interview Log 5
 
-**Interviewee:** Construction team lead (Tbilisi)
+**Interviewee:** Construction team lead (Tbilisi) · **Code name:** TeamLead-1
 
 **Interviewer:** Luka Khachapuridze
 
@@ -52,6 +52,8 @@ He knows the checklist exists but doesn't go back to it during the day. *(assump
 - **Third confirmation of the edge-fence problem:** owner (Interview 2), safety specialist (Interview 3) and now the team lead all point to repeated, simple violations between visits. The team lead confirms the cause from the inside: the fence is removed for a real reason (lifting) and forgotten.
 - **Violations come from forgetting, not refusing:** nobody decides to leave the edge open; it happens because the work moves on.
 - **A new category appeared: design deviation.** Work that doesn't match the architectural drawings is a different problem from site safety (fences, litter, PPE). It may matter for fines, but it needs different checking (against plans, not against rules).
+
+**Surprise ★:** Violations come from forgetting, not refusing: the fence came off for lifting and nobody remembered it. He also raised work that doesn't match the architectural drawings, which we never asked about.
 
 ## Ask next time
 

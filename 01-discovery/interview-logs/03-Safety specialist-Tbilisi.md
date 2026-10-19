@@ -1,6 +1,6 @@
 # Interview Log 3
 
-**Interviewee:** Safety specialist at a mid-sized construction company (Tbilisi), referred by the owner in Interview 2
+**Interviewee:** Safety specialist at a mid-sized construction company (Tbilisi), referred by the owner in Interview 2 · **Code name:** Specialist-1
 
 **Interviewer:** Luka Khachapuridze
 
@@ -50,6 +50,8 @@ He leaves a checklist of what should be done after each visit. *(from Interview 
 - **The top violation is edge protection, not PPE:** fences get removed during normal work (lifting materials) and are not put back afterwards.
 - **The oversight gap is confirmed from the specialist's side:** he agrees with the owner (Interview 2) that he can't be present or watching all the time, and that simple, repeated violations happen in between.
 - **The problem is "undone" safety, not missing safety:** the protection exists and was installed; it is removed for a legitimate reason and not restored.
+
+**Surprise ★:** The most common violation is missing edge fences, not PPE. We expected helmets.
 
 ## Ask next time
 
