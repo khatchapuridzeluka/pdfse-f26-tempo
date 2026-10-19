@@ -18,14 +18,24 @@ Same prompt every week: Where did you apply this pattern this week, where did yo
 - **Agency beyond assigned lane:** I pulled the Lab 2 work, read the hypothesis, script and interview logs, and checked what was still empty for me (my journal, my interview log, my outreach row), so Delivery was tracking what was missing, not only what was done.
 - **Hacked faster:** I used the team's interview script as a checklist while reviewing the logs, to see which of our two "unpicked beliefs" each interview actually tested.
 - **Driven DECISIONS.md lines:**
-  - None yet. `Wk2 · Investigate: construction site safety compliance and PPE violations in Georgia` is owned by LK and TT; my belief is recorded in `01-discovery/problem.hypothesis.md`.
+  - None yet. `Wk2 · Investigate: construction site safety compliance and PPE violations in Georgia` is owned by LK and TT; my belief is recorded in `01-discovery/problem-hypothesis.md`.
 
 ---
 
-## Week 3 · Evidence over opinion (interviews)
+## Week 3 · Kill your favorite idea
 
 - **Applied the pattern:** I recorded and logged our first interview and turned the raw audio into a structured log instead of a transcript. I rated each finding as strong, weak or missing, so we do not treat a declined answer as support for our hypothesis.
 - **Agency beyond assigned lane:** I wrote the questions for this interview and reviewed them afterwards, not only the answers. The log lists four lessons (match questions to the role, change route after a refusal, use open questions, keep it a conversation) and next steps, so the team can use them in the real interviews.
 - **Hacked faster:** I transcribed the recording with speech-to-text and then edited it by hand, instead of typing the interview from memory.
 - **Driven DECISIONS.md lines:**
-  - None yet. The hypothesis verdict is still open, pending interviews with a manager or safety specialist. See `members/rubikg6/interview1.md`.
+  - None yet. The hypothesis verdict is still open, pending interviews with a manager or safety specialist. See `01-discovery/interview-logs/06-Site worker-Kutaisi.md`.
+
+---
+
+## Week 4 · The prototype is the conversation
+
+- **Applied the pattern:** I made script v2 with separate questions for workers and managers and used it in Interview 7 (`01-discovery/interview-logs/07-Site worker-Kutaisi.md`). I also filled in our prototype plan around one alert a tester can react to.
+- **Agency beyond assigned lane:** Tekla asked me to move my first log into `01-discovery/interview-logs/`, so I did, and I signed the team contract.
+- **Hacked faster:** The worker did not want to be recorded, so I wrote his answers down while he talked. The log says the quotes are translations, not word for word.
+- **Driven DECISIONS.md lines:**
+  - The Wk4 problem statement line (owner: LK, TT, GG). Logs 06 and 07 are cited in its evidence.
