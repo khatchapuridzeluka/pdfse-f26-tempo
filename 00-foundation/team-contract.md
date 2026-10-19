@@ -46,4 +46,4 @@ Committing this file is signing it.
 |---|---|---|
 | Luka Khachapuridze | @khatchapuridzeluka | 28 Sep 2026 |
 | Tekla Tsitelishvili| @ttsitelishvili | 28 Sep 2026 |
-| Giorgi Gagua | @rubikg6 | 28 Sep 2026 |
+| Giorgi Gagua | @rubikg6 | 18 Oct 2026 |
