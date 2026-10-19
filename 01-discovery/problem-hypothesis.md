@@ -23,6 +23,7 @@ Each one becomes at least one question in your interview script, so you still he
 
 
 ## After interviews (fill in Week 3)
-**Verdict:** confirmed · **Evidence:** [Log 2](<interview-logs/02-Consturction company owner-Tbilisi.md>), [Log 3](<interview-logs/03-Safety specialist-Tbilisi.md>), [Log 5](<interview-logs/05-Construction team lead-Tbilisi.md>) · Recorded in `DECISIONS.md`.
+**Verdict:** confirmed · **Evidence:** [Log 1](<interview-logs/01-Engineer-Kutaisi.md>), [Log 2](<interview-logs/02-Consturction company owner-Tbilisi.md>), [Log 3](<interview-logs/03-Safety specialist-Tbilisi.md>), [Log 4](<interview-logs/04-Construction Company Director-Kutaisi.md>), [Log 5](<interview-logs/05-Construction team lead-Tbilisi.md>) · Recorded in `DECISIONS.md`.
 
-No interviewee said workers stay compliant without oversight: PPE isn't worn and edge fences are removed and not put back between the specialist's visits (Logs 02, 03, 05). Fines are a large, real cost: about 150,000 GEL in 4 months (Log 02).
+No interviewee said workers stay compliant without oversight: helmets come off because "It's hot, the helmets feel tight" (Log 1), edge fences are removed and not put back (Logs 3, 5), and between visits monitoring "relies solely on my verbal oversight" (Log 1). Fines are a large, real cost: about 150,000 GEL in 4 months (Log 2), and a 3-day stoppage brings developer delay penalties of up to 5,000 GEL per day (Log 4). Week 4 nuance: in Log 6 the company was not fined because the lapse was treated as an individual error, and Log 7's crew calls inspections rare.
+

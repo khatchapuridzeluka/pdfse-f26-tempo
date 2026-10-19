@@ -3,9 +3,41 @@
 **Team Name:** TEMPO
 **Date:** 18 October 2026
 **Lab:** Lab 4 - Week 4
-**Based on:** Interview Logs 2, 3, 5 (Weeks 3-4) · [affinity-map.md](affinity-map.md) · [patterns-analysis.md](patterns-analysis.md)
+**Based on:** Interview Logs 1–7 (Weeks 2-4) · [affinity-map.md](synthesis/affinity-map.md) · [patterns-analysis.md](synthesis/patterns-analysis.md)
 
-**Note:** Quotes in this document are reconstructed from interview notes, not verbatim, as marked in the logs. Only statements the interviewees made are used as evidence; answers marked *(assumption)* or *(from Interview 2)* in Logs 3 and 5 are not counted.
+## The statement
+
+1. **Who:** Owners and founders of mid-sized residential construction companies in Tbilisi and Kutaisi who pay a labor safety specialist to rotate between their sites every 4–5 days, and who pay the fines without being on site themselves, like L.G. in Kutaisi. (01, 02, 04)
+2. **When:** A normal working day between the specialist's visits, when the engineer is busy with the build, helmets come off because "It's hot, the helmets feel tight", and a crew takes an edge fence off to lift materials and nobody puts it back. (01, 03, 05)
+3. **Cost:** About 150,000 GEL in fines over 4 months for one owner (02); for another, a 2,000 GEL fine that stops a site for 3 days brings developer delay penalties of up to 5,000 GEL a day, more than 15,000 GEL lost to delay penalties last year, and 4 hours a week spent phoning site engineers to check compliance before audits. (02, 04)
+4. **Today:** The engineer's verbal reminders at the morning task handoff, the specialist's verbal feedback or checklist, the owner being strict, weekly syncs with engineers, executives' random site visits every two weeks, monthly bonuses to foremen, and a paper safety log. (01, 02, 04)
+5. **Why it fails:** Between visits everything rests on one busy person's word, "Until the next visit, monitoring that issue relies solely on my verbal oversight" (01), and the owner only learns what happened when the inspector does: "As the founder, I have no idea whether workers on-site are actually wearing helmets and harnesses today, until the Labor Inspection arrives." (04)
+
+## What the evidence ruled out
+
+- **"Workers stay compliant without oversight"** (our "we are wrong if" line): 0 of 7 logs said so. Logs 01, 04 and 07 raised the problem before we asked. Verdict: confirmed, line 2 of `DECISIONS.md`.
+- **"PPE is missing or too expensive":** ruled out. Equipment is on site in Logs 01, 02 and 07 ("We had the equipment fully available on-site; it's simply a matter of habit." (01)); 0 of 7 said it was missing.
+- **"The specialist gives no guidance":** narrowed, not killed. One specialist leaves a checklist (02), another only gives verbal feedback (01), and a small crew has no specialist at all (07). Guidance exists in some form; the gap is that nobody follows it up between visits.
+- **"It is mainly PPE":** narrowed. The most common violation named is edge fences removed for lifting (03, 05), and the latest warning in Log 02 was for litter while PPE was full.
+
+## What is still open
+
+When a violation becomes a company fine and when it is treated as the worker's own fault. In Log 06 the company was not fined because "it was an individual error", while Logs 02 and 04 report large company fines; no log breaks the fines down by violation type. We ask the next owner for the breakdown of their last fines and who was blamed for each.
+
+## Pattern behind it
+
+- Pattern: Safety slips in the days between the specialist's visits, because nobody is checking. (01, 02, 03, 04, 07)
+- Root cause: Safety is checked periodically by someone who is not on site, while violations happen continuously in front of people whose job is something else, and the owner who pays cannot see them until the inspector arrives.
+
+Supporting pattern: Safety is performed for the inspector, not kept up day to day: the safety log is "done by hand at the last minute right before an inspector arrives" (04), and a crew posts a lookout at the gate and watches its cameras so helmets go on when the inspector walks in (07).
+
+---
+
+# Supporting analysis (v1, written from Logs 2, 3, 5)
+
+The analysis below was written before Logs 1, 4, 6 and 7 were added. Where it differs from the statement above, the statement above is current.
+
+**Note:** Quotes in this analysis are reconstructed from interview notes, not verbatim, as marked in the logs. Only statements the interviewees made are used as evidence; answers marked *(assumption)* or *(from Interview 2)* in Logs 3 and 5 are not counted.
 
 ---
 
@@ -374,4 +406,4 @@ Interviews #01 and #04 are not included yet.
 
 ---
 
-**File Location:** `/01-discovery/synthesis/final-problem-statement.md`
+**File Location:** `/01-discovery/problem-statement.md`
