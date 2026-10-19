@@ -27,3 +27,7 @@ Same prompt every week: Where did you apply this pattern this week, where did yo
 - **Agency beyond assigned lane:** Reviewed and merged teammates' pull requests so their Week 3 work was in the repo before the lab, Wrote out tasks to be implemented and distributed them in the team for more productive outcomes.
 - **Hacked faster:** L.G. could not meet in person, so I ran interview 04 as a phone call instead of waiting for a site visit. Before the call I rewrote our "we are wrong if" line for a founder instead of a site manager, so the interview could actually test it.
 - **Links:**`01-discovery/interview-logs/01-Engineer-Kutaisi.md`
+
+
+### Week 4 · The prototype is the conversation
+Before Milestone 1 I checked every rubric row against our repo and brought the synthesis, competitive landscape and problem statement up to all 7 logs instead of 3. Outside my lane: renamed the logs and the hypothesis file to the required paths and wrote our tracking system into the team contract. Hack: used Claude Code to check the repo against the rubric in one pass, logged in `docs/ai-usage-log.md`. `01-discovery/problem-statement.md`
