@@ -1,37 +1,37 @@
-# Luka's Problem Statements
+# Homework 1 · Luka Khachapuridze (@khatchapuridzeluka) · Team TEMPO
 
-AUTHOR: Luka Khachapuridze
+## 1. My interview log
 
-## Statement 1
+| Log file | My role | What this interview changed |
+|---|---|---|
+| `01-discovery/interview-logs/02-Consturction company owner-Tbilisi.md` | asked | Killed both of our side beliefs: PPE is on site but workers find it uncomfortable, and the specialist does leave a checklist. Gave us the real cost: about 150,000 GEL in fines over 4 months from repeated violations. |
+| `01-discovery/interview-logs/03-Safety specialist-Tbilisi.md` | asked | Moved the problem away from PPE: the most common violation is edge fences removed while lifting materials and not put back. Confirmed the gap from his side: he can't be on site all the time. |
+| `01-discovery/interview-logs/05-Construction team lead-Tbilisi.md` | asked | Showed the cause from inside the crew: the fence comes off for a real reason (lifting) and is forgotten, not refused. Added litter and a new outlier: work not matching the architectural drawings. |
 
-AUTHOR: Luka
+**The quote I heard myself that mattered most:**
 
-WHO I watched: My father, a builder in Tbilisi and Kutaisi with 30 years of experience who runs his own construction company, D Group, and relies on a labor safety specialist who visits the site once every 4–5 days
+> "I can't be on site 24 hours a day or watch for simple violations like this every moment." (03, reconstructed from notes)
 
-STRUGGLE I saw: On days the safety specialist isn't there, workers skip helmets, dump debris outside the designated area, and leave slab edges without guardrails; the violations are found only when a labor inspector shows up
+**One moment I broke the Mom Test:** In log 02 I discussed our solution idea with the owner during the interview, so his reactions became compliments and opinions about the future instead of facts about the past. The log records that those reactions are not counted as evidence, and Script v2 has no solution questions; it only asks about the last real case, such as "Tell me about the last time safety rules were not followed. How did you find out?"
 
-COST I can name: A 5,000 GEL fine and a 14-day work stoppage on the "Mwvanekvavila" project for missing PPE, a violation that had been spotted before and never fixed
+## 2. Pattern journal, Weeks 1 to 4
 
----
+### Week 1 · Act like an owner, not a role
+Brought the construction safety problem from my father's company, D Group: a 5,000 GEL fine and a 14-day work stoppage for a PPE violation that had already been spotted and never fixed. Outside my lane: [what you did beyond your role in Week 1]. Hack: [one shortcut you used]. `00-foundation/problem-pool.md`
 
-## Statement 2
+### Week 2 · Evidence over opinion
+Scored the candidate problems with the Four Filters; construction safety won over junior CS resume tailoring because we could reach site owners and specialists right away through my father's network. Outside my lane: set up the outreach list in the ICP and contacted the owner, a large company in Saburtalo and D Group's safety specialist myself. Hack: [one shortcut you used]. `00-foundation/four-filters-scorecard.md`
 
-AUTHOR: Luka
+### Week 3 · Kill your favorite idea
+My belief was that workers skip essential PPE (helmets, guardrails) when the specialist is away. Half of it died: PPE is on site, and workers skip it because it is uncomfortable, not because it is missing (02). The guardrail part got stronger, but for a different reason: fences are removed during normal work to lift materials and nobody puts them back (03, 05). Outside my lane: reviewed a teammate's Script v2 and flagged citations that did not match the logs. Hack: got the specialist's number directly from the owner at the end of interview 02 and interviewed him two days later. `01-discovery/interview-logs/03-Safety specialist-Tbilisi.md`
 
-WHO I watched: The Fundamentals of Programming lecturer at Kutaisi International University, who teaches first-year students and posts weekly homework through the university LMS
+### Week 4 · The prototype is the conversation
+Turned Logs 2, 3 and 5 into the first synthesis: three patterns in the affinity map, ranked in the patterns analysis, and the first draft of the problem statement. Wrote the Week 3 verdict into the problem hypothesis and `DECISIONS.md`, and updated the ICP to v2 with evidence lines. Outside my lane: fixed our repo workflow after edits kept going to a OneDrive copy that git does not track. Hack: used Claude to draft the synthesis files from the logs, [logged in `docs/ai-usage-log.md`]. `01-discovery/synthesis/patterns-analysis.md`
 
-STRUGGLE I saw: At the start of class, the lecturer complained that students' submitted homework wasn't showing up in the LMS, so they had sent their work to him on Microsoft Teams instead and he had to open and check every message one by one
+## 3. My DECISIONS.md citations
 
-COST I can name: Students received zero points for homework they had actually submitted, and the lecturer spent several hours going through Teams messages to find and re-grade their work
-
----
-
-## Statement 3
-
-AUTHOR: Luka
-
-WHO I watched: My friend, a third-year Computer Science student at Kutaisi International University looking for his first junior developer job or internship in Georgia
-
-STRUGGLE I saw: Every evening he sends out his CV to new junior postings, most of which ask for up to 2 years of experience; he either gets rejected or gets no response at all
-
-COST I can name: About 30 applications over 1 month with 5 replies (all rejections due to the lack of experience) and 0 interviews, plus an hour or more every evening spent tailoring and sending CVs
+| The line, copied | What I did for it |
+|---|---|
+| `Wk2 · Investigate: construction site safety compliance and PPE violations in Georgia · evidence: 00-foundation/problem-pool.md (Luka), 00-foundation/four-filters-scorecard.md · runner-up: junior CS resume and application tailoring · owner: LK, TT` | Wrote Statement 1 in the problem pool, the fine and stoppage this line's evidence starts from. |
+| `Wk3 · Prediction "site managers tell us that workers maintain full PPE compliance without oversight, or that fines from unannounced inspections are rare/negligible risks they actively ignore" verdict: confirmed · evidence: 01-discovery/interview-logs/01-Engineer-Kutaisi.md, 02-Consturction company owner-Tbilisi.md, 03-Safety specialist-Tbilisi.md, 04-Construction Company Director-Kutaisi.md, 05-Construction team lead-Tbilisi.md · next: refine the problem around edge fences and site order, not only PPE · owner: LK` | Asked three of its five evidence logs (02, 03, 05) and wrote the verdict. |
+| `Wk4 · Problem statement v1: owners of mid-sized construction companies pay fines and daily delay penalties for simple, repeated violations because nobody checks the site between the safety specialist's visits, and safety is only performed when an inspector is expected · evidence: 01-discovery/problem-statement.md, 01-discovery/synthesis/patterns-analysis.md · owner: LK, TT, GG` | Wrote the first patterns analysis and problem statement draft from Logs 2, 3 and 5. |
