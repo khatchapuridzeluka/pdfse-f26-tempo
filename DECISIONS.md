@@ -5,3 +5,5 @@ Wk3 · Prediction "site managers tell us that workers maintain full PPE complian
 Wk4 · Problem statement v1: owners of mid-sized construction companies pay fines and daily delay penalties for simple, repeated violations because nobody checks the site between the safety specialist's visits, and safety is only performed when an inspector is expected · evidence: 01-discovery/problem-statement.md, 01-discovery/synthesis/patterns-analysis.md · owner: LK, TT, GG
 
 Wk6 · North star: alerts resolved per active owner per week; rejected safety alerts sent per month (fired by the system, not value) and owners signed up for the trial (presence, cumulative) · evidence: 03-build/analytics/event-schema.md, 01-discovery/interview-logs/01-Engineer-Kutaisi.md, 02-Consturction company owner-Tbilisi.md, 04-Construction Company Director-Kutaisi.md · owner: TT
+
+Wk6 · MVP boundary: 6-step journey (owner opens his link to owner marks the alert resolved); cut camera helmet detection, payments, reports dashboard · evidence: 03-build/mvp-boundary.md, 02-design/prototype-plan.md, 01-discovery/interview-logs/01-Engineer-Kutaisi.md, 04-Construction Company Director-Kutaisi.md · owner: TT

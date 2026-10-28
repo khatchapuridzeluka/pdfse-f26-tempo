@@ -31,3 +31,7 @@ Same prompt every week: Where did you apply this pattern this week, where did yo
 
 ### Week 4 · The prototype is the conversation
 Before Milestone 1 I checked every rubric row against our repo and brought the synthesis, competitive landscape and problem statement up to all 7 logs instead of 3. Outside my lane: renamed the logs and the hypothesis file to the required paths and wrote our tracking system into the team contract. Hack: used Claude Code to check the repo against the rubric in one pass, logged in `docs/ai-usage-log.md`. `01-discovery/problem-statement.md`
+
+
+### Week 5 · Prototype Build and North Star
+I ran our north star worksheet and rejected the two numbers that would have looked best on a slide, alerts sent and trial sign-ups, because neither makes the owner's problem smaller. We kept "alerts resolved per active owner per week": an alert only matters when the violation is gone before the inspector comes. Outside my lane: merged Giorgi's prototype plan so the test plan could copy its frozen test word for word, and turned the Lab 5 homework into GitHub issues. Hack: instead of recruiting strangers first, I put two people we had already interviewed, Owner-1 (02) and Director-4 (04), at the top of the tester list, so the first sessions could be booked with one message each. `DECISIONS.md` (Wk6 north star line), `02-design/user-testing/test-plan.md`
