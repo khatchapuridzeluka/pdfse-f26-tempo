@@ -184,7 +184,7 @@ class MainActivity : ComponentActivity() {
         val frame = Bitmap.createBitmap(raw, 0, 0, raw.width, raw.height, matrix, true)
 
         val results = try {
-            tracker.update(safety.analyze(frame))
+            tracker.update(safety.analyze(frame), started)
         } catch (e: Exception) {
             Log.e(TAG, "Analysis failed", e)
             emptyList()
@@ -202,9 +202,12 @@ class MainActivity : ComponentActivity() {
     private fun showStatus(results: List<TrackedPerson>, elapsedMs: Long) {
         val withHelmet = results.count { it.status == HelmetStatus.HELMET }
         val without = results.count { it.status == HelmetStatus.NO_HELMET }
-        status.text = "People: ${results.size}   ✓ Helmet: $withHelmet   ✗ No helmet: $without\n$elapsedMs ms per frame"
+        val suspected = results.count { it.status == HelmetStatus.SUSPECTED }
+        status.text = "People: ${results.size}   ✓ Helmet: $withHelmet   ✗ No helmet: $without" +
+            (if (suspected > 0) "   ? Checking: $suspected" else "") +
+            "\n$elapsedMs ms per frame"
 
-        // The tracker already votes over several frames, so one verdict is enough to alarm.
+        // Only confirmed violations (helmet-less for PersonTracker.CONFIRM_MS) raise the alarm.
         val alarm = without > 0
         banner.visibility = if (alarm) View.VISIBLE else View.GONE
         status.setBackgroundColor(if (alarm) BoxPainter.VIOLATION_RED and 0xCCFFFFFF.toInt() else 0xB3000000.toInt())

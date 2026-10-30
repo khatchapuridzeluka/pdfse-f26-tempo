@@ -9,6 +9,8 @@ import kotlin.math.min
 
 data class PersonResult(
     val box: RectF,
+    /** False when the box starts at the top edge of the frame, so the head may be out of view. */
+    val headVisible: Boolean,
     val hasHelmet: Boolean,
     val helmetScore: Float,
     val hasVest: Boolean,
@@ -29,6 +31,11 @@ class SafetyAnalyzer(context: Context) : Closeable {
             .mapNotNull { box -> checkPerson(frame, box) }
 
     private fun checkPerson(frame: Bitmap, box: RectF): PersonResult? {
+        // A body cut off at the top of the frame has no head to check: judging it gave false alarms.
+        if (box.top <= HEAD_EDGE * frame.height) {
+            return PersonResult(box, headVisible = false, hasHelmet = false, helmetScore = 0f, hasVest = false)
+        }
+
         // Widen the crop a little and extend it upward so a helmet is never cut off.
         val left = max(0, (box.left - SIDE_PAD * box.width()).toInt())
         val top = max(0, (box.top - TOP_PAD * box.height()).toInt())
@@ -39,7 +46,7 @@ class SafetyAnalyzer(context: Context) : Closeable {
         val crop = Bitmap.createBitmap(frame, left, top, right - left, bottom - top)
         val result = gear.check(crop)
         crop.recycle()
-        return PersonResult(box, result.hasHelmet, result.helmetScore, result.hasVest)
+        return PersonResult(box, headVisible = true, result.hasHelmet, result.helmetScore, result.hasVest)
     }
 
     override fun close() {
@@ -50,6 +57,7 @@ class SafetyAnalyzer(context: Context) : Closeable {
     companion object {
         private const val MAX_CHECKED = 6
         private const val MIN_PERSON_HEIGHT = 0.10f
+        private const val HEAD_EDGE = 0.02f
         private const val SIDE_PAD = 0.10f
         private const val TOP_PAD = 0.15f
         private const val MIN_CROP_W = 16

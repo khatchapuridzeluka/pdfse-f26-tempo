@@ -3,13 +3,17 @@ package com.tempo.helmetdemo
 import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Color
+import android.graphics.DashPathEffect
 import android.graphics.Paint
 import android.graphics.RectF
 import android.util.AttributeSet
 import android.view.View
 import kotlin.math.max
 
-/** Draws a green (helmet), red (no helmet) or amber (still checking) box over each person. */
+/**
+ * Draws a box over each person: green helmet, solid red confirmed violation, dashed red suspected,
+ * dashed amber still checking, dashed grey head not visible.
+ */
 class OverlayView(context: Context, attrs: AttributeSet? = null) : View(context, attrs) {
 
     private var results: List<TrackedPerson> = emptyList()
@@ -50,13 +54,15 @@ class BoxPainter(density: Float) {
         isAntiAlias = true
     }
     private val pad = 4f * density
+    private val dashes = DashPathEffect(floatArrayOf(10f * density, 6f * density), 0f)
 
     fun draw(canvas: Canvas, results: List<TrackedPerson>, scale: Float, dx: Float, dy: Float) {
         for (r in results) {
             val color = when (r.status) {
                 HelmetStatus.HELMET -> OK_GREEN
-                HelmetStatus.NO_HELMET -> VIOLATION_RED
+                HelmetStatus.NO_HELMET, HelmetStatus.SUSPECTED -> VIOLATION_RED
                 HelmetStatus.CHECKING -> CHECKING_AMBER
+                HelmetStatus.HEAD_HIDDEN -> HIDDEN_GREY
             }
             val rect = RectF(
                 r.box.left * scale + dx,
@@ -65,12 +71,16 @@ class BoxPainter(density: Float) {
                 r.box.bottom * scale + dy,
             )
             box.color = color
+            // Dashed until confirmed: only a solid red box is a real violation.
+            box.pathEffect = if (r.status == HelmetStatus.NO_HELMET || r.status == HelmetStatus.HELMET) null else dashes
             canvas.drawRect(rect, box)
 
             var label = when (r.status) {
                 HelmetStatus.HELMET -> "HELMET ${(r.helmetScore * 100).toInt()}%"
                 HelmetStatus.NO_HELMET -> "NO HELMET"
+                HelmetStatus.SUSPECTED -> "NO HELMET?"
                 HelmetStatus.CHECKING -> "CHECKING…"
+                HelmetStatus.HEAD_HIDDEN -> "HEAD NOT VISIBLE"
             }
             if (r.hasVest) label += " · vest"
             val textWidth = text.measureText(label)
@@ -85,5 +95,6 @@ class BoxPainter(density: Float) {
         val OK_GREEN = Color.rgb(0x43, 0xA0, 0x47)
         val VIOLATION_RED = Color.rgb(0xE5, 0x39, 0x35)
         val CHECKING_AMBER = Color.rgb(0xFF, 0xA0, 0x00)
+        val HIDDEN_GREY = Color.rgb(0x9E, 0x9E, 0x9E)
     }
 }
