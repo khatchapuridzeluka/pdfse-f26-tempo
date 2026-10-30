@@ -1,0 +1,16 @@
+# Gradle / Android Studio
+.gradle/
+build/
+*/build/
+local.properties
+.idea/
+*.iml
+.DS_Store
+captures/
+.externalNativeBuild/
+.cxx/
+
+# Secrets never go in the repo
+.env
+*.jks
+*.keystore

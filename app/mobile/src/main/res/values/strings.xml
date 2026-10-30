@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TEMPO Safety</string>
+    <string name="loading">Loading models…</string>
+    <string name="no_camera_permission">TEMPO needs the camera to check helmets. Allow it in Settings.</string>
+    <string name="violation_banner">⚠ NO HELMET DETECTED</string>
+    <string name="flip_camera">Flip</string>
+    <string name="snapshot">Save photo</string>
+</resources>
