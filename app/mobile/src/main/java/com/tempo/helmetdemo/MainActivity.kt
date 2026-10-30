@@ -60,12 +60,12 @@ class MainActivity : ComponentActivity() {
 
     // Created and used only on cameraExecutor.
     private var analyzer: SafetyAnalyzer? = null
+    private val tracker = PersonTracker()
 
     // Last analysed frame, kept for the "Save photo" button.
     @Volatile private var lastFrame: Bitmap? = null
-    @Volatile private var lastResults: List<PersonResult> = emptyList()
+    @Volatile private var lastResults: List<TrackedPerson> = emptyList()
 
-    private var violationStreak = 0
     private var lastVibrationAt = 0L
 
     private val requestCamera = registerForActivityResult(ActivityResultContracts.RequestPermission()) { granted ->
@@ -87,6 +87,7 @@ class MainActivity : ComponentActivity() {
             } else {
                 CameraSelector.LENS_FACING_BACK
             }
+            cameraExecutor.execute { tracker.reset() }
             bindCamera()
         }
         findViewById<Button>(R.id.snapshot).setOnClickListener { saveSnapshot() }
@@ -183,7 +184,7 @@ class MainActivity : ComponentActivity() {
         val frame = Bitmap.createBitmap(raw, 0, 0, raw.width, raw.height, matrix, true)
 
         val results = try {
-            safety.analyze(frame)
+            tracker.update(safety.analyze(frame))
         } catch (e: Exception) {
             Log.e(TAG, "Analysis failed", e)
             emptyList()
@@ -198,14 +199,13 @@ class MainActivity : ComponentActivity() {
         }
     }
 
-    private fun showStatus(results: List<PersonResult>, elapsedMs: Long) {
-        val withHelmet = results.count { it.hasHelmet }
-        val without = results.size - withHelmet
+    private fun showStatus(results: List<TrackedPerson>, elapsedMs: Long) {
+        val withHelmet = results.count { it.status == HelmetStatus.HELMET }
+        val without = results.count { it.status == HelmetStatus.NO_HELMET }
         status.text = "People: ${results.size}   ✓ Helmet: $withHelmet   ✗ No helmet: $without\n$elapsedMs ms per frame"
 
-        // Only raise the alarm after a few frames in a row, so one bad frame doesn't flash it.
-        violationStreak = if (without > 0) violationStreak + 1 else 0
-        val alarm = violationStreak >= ALARM_FRAMES
+        // The tracker already votes over several frames, so one verdict is enough to alarm.
+        val alarm = without > 0
         banner.visibility = if (alarm) View.VISIBLE else View.GONE
         status.setBackgroundColor(if (alarm) BoxPainter.VIOLATION_RED and 0xCCFFFFFF.toInt() else 0xB3000000.toInt())
 
@@ -235,7 +235,7 @@ class MainActivity : ComponentActivity() {
         BoxPainter(annotated.width / 400f).draw(canvas, results, 1f, 0f, 0f)
 
         val stamp = SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.US).format(Date())
-        val without = results.count { !it.hasHelmet }
+        val without = results.count { it.status == HelmetStatus.NO_HELMET }
         val caption = "TEMPO · $stamp · people ${results.size} · no helmet $without"
         val textPaint = Paint().apply {
             color = Color.WHITE
@@ -277,7 +277,6 @@ class MainActivity : ComponentActivity() {
 
     companion object {
         private const val TAG = "TempoSafety"
-        private const val ALARM_FRAMES = 3
         private const val VIBRATE_EVERY_MS = 3000L
     }
 }

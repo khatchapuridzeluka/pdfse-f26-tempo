@@ -9,15 +9,15 @@ import android.util.AttributeSet
 import android.view.View
 import kotlin.math.max
 
-/** Draws a green (helmet) or red (no helmet) box with a label over each detected person. */
+/** Draws a green (helmet), red (no helmet) or amber (still checking) box over each person. */
 class OverlayView(context: Context, attrs: AttributeSet? = null) : View(context, attrs) {
 
-    private var results: List<PersonResult> = emptyList()
+    private var results: List<TrackedPerson> = emptyList()
     private var sourceWidth = 1
     private var sourceHeight = 1
     private val painter = BoxPainter(resources.displayMetrics.density)
 
-    fun setResults(results: List<PersonResult>, sourceWidth: Int, sourceHeight: Int) {
+    fun setResults(results: List<TrackedPerson>, sourceWidth: Int, sourceHeight: Int) {
         this.results = results
         this.sourceWidth = sourceWidth
         this.sourceHeight = sourceHeight
@@ -51,9 +51,13 @@ class BoxPainter(density: Float) {
     }
     private val pad = 4f * density
 
-    fun draw(canvas: Canvas, results: List<PersonResult>, scale: Float, dx: Float, dy: Float) {
+    fun draw(canvas: Canvas, results: List<TrackedPerson>, scale: Float, dx: Float, dy: Float) {
         for (r in results) {
-            val color = if (r.hasHelmet) OK_GREEN else VIOLATION_RED
+            val color = when (r.status) {
+                HelmetStatus.HELMET -> OK_GREEN
+                HelmetStatus.NO_HELMET -> VIOLATION_RED
+                HelmetStatus.CHECKING -> CHECKING_AMBER
+            }
             val rect = RectF(
                 r.box.left * scale + dx,
                 r.box.top * scale + dy,
@@ -63,7 +67,11 @@ class BoxPainter(density: Float) {
             box.color = color
             canvas.drawRect(rect, box)
 
-            var label = if (r.hasHelmet) "HELMET ${(r.helmetScore * 100).toInt()}%" else "NO HELMET"
+            var label = when (r.status) {
+                HelmetStatus.HELMET -> "HELMET ${(r.helmetScore * 100).toInt()}%"
+                HelmetStatus.NO_HELMET -> "NO HELMET"
+                HelmetStatus.CHECKING -> "CHECKING…"
+            }
             if (r.hasVest) label += " · vest"
             val textWidth = text.measureText(label)
             val labelTop = max(0f, rect.top - text.textSize - 2 * pad)
@@ -76,5 +84,6 @@ class BoxPainter(density: Float) {
     companion object {
         val OK_GREEN = Color.rgb(0x43, 0xA0, 0x47)
         val VIOLATION_RED = Color.rgb(0xE5, 0x39, 0x35)
+        val CHECKING_AMBER = Color.rgb(0xFF, 0xA0, 0x00)
     }
 }

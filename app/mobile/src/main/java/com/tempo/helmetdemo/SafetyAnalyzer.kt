@@ -22,6 +22,8 @@ class SafetyAnalyzer(context: Context) : Closeable {
 
     fun analyze(frame: Bitmap): List<PersonResult> =
         people.detect(frame)
+            // Very small boxes are mostly false people, and too blurry to judge a helmet anyway.
+            .filter { it.height() >= MIN_PERSON_HEIGHT * frame.height }
             .sortedByDescending { it.width() * it.height() }
             .take(MAX_CHECKED)
             .mapNotNull { box -> checkPerson(frame, box) }
@@ -47,6 +49,7 @@ class SafetyAnalyzer(context: Context) : Closeable {
 
     companion object {
         private const val MAX_CHECKED = 6
+        private const val MIN_PERSON_HEIGHT = 0.10f
         private const val SIDE_PAD = 0.10f
         private const val TOP_PAD = 0.15f
         private const val MIN_CROP_W = 16

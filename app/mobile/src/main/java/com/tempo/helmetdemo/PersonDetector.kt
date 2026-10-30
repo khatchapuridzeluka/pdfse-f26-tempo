@@ -33,7 +33,8 @@ class PersonDetector(context: Context) : Closeable {
 
     companion object {
         const val MODEL = "efficientdet_lite0.tflite"
-        const val MIN_SCORE = 0.4f
+        // 0.4 let dark shapes (a monitor edge) through as "people" in phone tests.
+        const val MIN_SCORE = 0.5f
         const val MAX_PEOPLE = 8
     }
 }
