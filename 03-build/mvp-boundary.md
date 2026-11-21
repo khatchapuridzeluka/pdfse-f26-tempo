@@ -2,24 +2,28 @@
 
 The smallest complete user journey that tests whether the product creates value. Complete: the person gets the value, start to finish. Smallest: nothing that is not on that path is in Sprint 1.
 
-**Value hypothesis under test:** An owner who gets a photo alert of a safety violation on his phone on the days between the specialist's visits, and sees the fix confirmed with a second photo, will get violations fixed before an inspector finds them (problem statement, sentences 2, 3 and 5; logs 01, 02, 04).
+**v1 (Week 6)** had the site engineer photograph violations by hand. It is in git history and in the Wk6 MVP boundary line of `DECISIONS.md`. **v2 replaces the engineer's photo with a camera that checks for helmets by itself.** Why: v1's open risk was that the engineer would not take the photos, because he "can't chase every worker every minute" (log 01). Many sites already have cameras around the work area (log 07). And our prototype's one action was always "an alert with a photo when a person on site is not wearing a helmet" (`02-design/prototype-plan.md`, section 2).
+
+**Value hypothesis under test:** An owner who gets a message with a photo when a camera sees a worker without a helmet, on the days between the specialist's visits, will get violations fixed before an inspector finds them (problem statement, sentences 2, 3 and 5; logs 01, 02, 04).
 
 **The one person walking this journey:** Shota, 56, runs a mid-sized construction company with sites in Tbilisi and Kutaisi; his safety specialist visits each site every 4–5 days, and between visits he only hears about violations when an inspector finds them.
 
 ## The journey
 
-1. Shota opens his private owner link and adds one site; he forwards the site's engineer link to his site engineer on WhatsApp
-2. The site engineer sees a violation (a helmet off, an edge fence removed after lifting), photographs it and sends it with the violation type
-3. Shota sees the alert on his phone: the photo, the site, the time, the violation type
-4. Shota taps "Call site engineer" and tells him to fix it
-5. The site engineer fixes it and uploads a photo of the fix
-6. Shota sees the fix photo and marks the alert resolved
+1. Shota opens his private owner link, sees his site and the camera's status ("Watching"), and taps "Connect Telegram" so alerts reach his phone
+2. A Tapo C220 camera on the site streams live video to our detection software, which checks every worker in view for a helmet
+3. When the software sees a worker without a helmet, Shota gets a Telegram message with a snapshot from the camera, the site, the time and a link
+4. Shota opens the alert on his phone
+5. Shota gets it fixed on site and taps "Resolved"
 
-**Why this is complete:** After step 6 a violation that used to stay on site until the inspector arrived is gone, and Shota has seen it gone himself instead of having "no idea" until the Labor Inspection comes (log 04).
+**Why this is complete:** After step 5, a helmet violation that used to stay on site until the inspector arrived is gone, and Shota knew about it the same day instead of having "no idea" until the Labor Inspection comes (log 04). Nobody on site had to report it.
 
-**Why this is smallest:** We considered removing step 5. Without the fix photo, "resolved" is the engineer's word again, which is exactly the verbal oversight that fails between visits: "Until the next visit, monitoring that issue relies solely on my verbal oversight" (log 01).
+**Why this is smallest:** We considered removing step 5. Without it, the journey ends at a message our system sent, which says nothing about whether the violation was fixed (the Wk6 north star line rejected "alerts sent" for this reason). We also considered dropping the message in step 3 and letting Shota check a page instead, but an alert he has to go looking for is the same as today, when he learns about violations only when the inspector does (log 04).
 
-**Open risk:** Log 01 says the engineer "can't chase every worker every minute". Whether an engineer or foreman will take the photos in step 2 is untested; we ask it in every test session.
+**Open risks (we check each one in the field week):**
+- **False alarms.** On 10 public site videos the detector raised 0 false alarms on 5 helmet clips and caught 4 of 5 no-helmet clips (`app/README.md` on branch `feat/helmet-detection-demo`). Those were videos, not a fixed camera on a real site. In the field week we look at every snapshot from a real site and count the false ones.
+- **Getting a camera onto a real site:** power, Wi-Fi, the owner's agreement, and telling the workers.
+- **Whether owners use Telegram.** The ICP coordinates by phone and WhatsApp. We ask every field-week owner.
 
 ## Cut list
 
@@ -31,21 +35,22 @@ The smallest complete user journey that tests whether the product creates value.
 | Checking work against architectural drawings | One log only (05), and a different problem from site safety | If more logs raise it |
 | Several sites per owner | The trial is one site for one month (prototype plan, screen 3) | After the trial |
 | Login with a password | A private owner link reaches every step; owners coordinate by phone (04) and nobody asked for an account | If a link is ever shared by mistake |
-| SMS or WhatsApp delivery of alerts | Step 4's call uses the phone Shota already phones engineers with (04); the hypothesis is tested once he opens the alert | If sessions show owners miss alerts because they don't open the link |
+
 
 ## Step to event
 
 | Step | Event (actor_verb_object) | In the schema? |
 |---|---|---|
-| 1 | `owner_opens_invite_link` | yes |
-| 2 | `engineer_reports_violation` | added today (fired by engineer; site_id, alert_id, violation_type; owner LK) |
-| 3 | `owner_views_alert` | yes |
-| 4 | `owner_calls_engineer` | yes |
-| 5 | `engineer_uploads_fix` | added today (fired by engineer; site_id, alert_id, minutes_since_alert; owner LK) |
-| 6 | `owner_resolves_alert` ★ | yes |
+| 1 | `owner_opens_invite_link`, `owner_connects_telegram` | yes / added Wk7 |
+| 2 | `system_detects_violation` | added Wk7 |
+| 3 | `system_sends_alert` | added Wk7 |
+| 4 | `owner_views_alert` | yes |
+| 5 | `owner_resolves_alert` ★ | yes |
 
-**North star step:** 6
+**North star step:** 5
+
+
 
 ## The DECISIONS.md line
 
-`Wk6 · MVP boundary: 6-step journey (owner opens his link to owner marks the alert resolved); cut camera helmet detection, payments, reports dashboard · evidence: 03-build/mvp-boundary.md, 02-design/prototype-plan.md, 01-discovery/interview-logs/01-Engineer-Kutaisi.md, 04-Construction Company Director-Kutaisi.md · owner: TT`
+Wk7 · MVP boundary v2: a Tapo C220 camera streams live video to our detection software; when it sees a worker without a helmet, the owner gets a Telegram message with a snapshot, opens it, gets it fixed and marks it resolved. Reverses the camera cut in the Wk6 MVP boundary line · evidence: 03-build/mvp-boundary.md (Week 7 change), 01-discovery/interview-logs/01-Engineer-Kutaisi.md ("I can't chase every worker every minute"), 07-Site worker-Kutaisi.md (cameras already around the work area), 04-Construction Company Director-Kutaisi.md, 02-design/prototype-plan.md section 2, app/README.md on feat/helmet-detection-demo · owner: TT, GG

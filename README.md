@@ -3,6 +3,8 @@
 **Investigating:**   Construction site safety compliance and PPE violations in Georgia 
 
 
+Owners of mid-sized construction companies pay fines and delay penalties for simple, repeated violations, because nobody checks the site between the safety specialist's visits (`01-discovery/problem-statement.md`). TEMPO connects a camera on the site (Tapo C220) to software that checks the live video for helmets. When it sees a worker without one, the owner gets a message with a photo, gets it fixed, and marks it resolved (`03-build/mvp-boundary.md`).
+
 **Team:** 
 - Luka Khachapuridze (@Khachapuridzeluka) 
 -  Tekla Tsitelishvili (@ttsitelishvili) 
