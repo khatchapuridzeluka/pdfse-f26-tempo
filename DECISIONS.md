@@ -12,3 +12,5 @@ Wk7 · MVP boundary v2: a Tapo C220 camera streams live video to our detection s
 
 Wk7 · Alerts reach the owner by a Telegram bot, not WhatsApp or SMS: a Telegram bot is free and set up in minutes, while WhatsApp and SMS need business verification or a paid number; not yet checked whether owners use Telegram, so we ask every field-week owner · evidence: 03-build/mvp-boundary.md (cut list, SMS or WhatsApp row), course repo Lab-6/setup/messages-out.md · owner: LK, TT, GG
 
+Wk7 · Gate open at rung 0: missing the production URL, the camera-to-resolved journey on it, owner_resolves_alert firing from production, the PostHog = database count, and the dashboard; owners and times in sprint-2.md · evidence: 03-build/sprints/sprint-2.md, 03-build/analytics/event-schema.md · owner: TT
+
