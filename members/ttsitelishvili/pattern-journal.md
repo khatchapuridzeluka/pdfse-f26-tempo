@@ -35,3 +35,8 @@ Before Milestone 1 I checked every rubric row against our repo and brought the s
 
 ### Week 5 · Prototype Build and North Star
 I ran our north star worksheet and rejected the two numbers that would have looked best on a slide, alerts sent and trial sign-ups, because neither makes the owner's problem smaller. We kept "alerts resolved per active owner per week": an alert only matters when the violation is gone before the inspector comes. Outside my lane: merged Giorgi's prototype plan so the test plan could copy its frozen test word for word, and turned the Lab 5 homework into GitHub issues. Hack: instead of recruiting strangers first, I put two people we had already interviewed, Owner-1 (02) and Director-4 (04), at the top of the tester list, so the first sessions could be booked with one message each. `DECISIONS.md` (Wk6 north star line), `02-design/user-testing/test-plan.md`
+
+
+### Week 6 · The smallest complete journey
+
+I wrote MVP boundary v1: six steps from the owner opening his private link to him marking the alert resolved, with the site engineer's phone photo standing in for a camera, so we could test whether owner acts on an alert before building any detection. When Luka gave me our Tapo C220, I unboxed it, set it up in the Tapo app on my phone, and got a live view of what the camera sees on my laptop in VLC; then I helped Luka set it up himself. Outside my lane, I tested Giorgi's helmet-detection demo on 30 Oct, the day he pushed it to `feat/helmet-detection-demo`. With a working camera and a working demo, we planned how the detection would connect to the camera, and that plan became the Week 7 change. `03-build/mvp-boundary.md` (v1, commit 87c3189), `DECISIONS.md` (Wk6 MVP boundary line)
