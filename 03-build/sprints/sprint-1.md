@@ -83,3 +83,7 @@ Do this story first, on the first evening, with `Lab-6/setup/SHIP-STACK-SETUP.md
 ## Slip rule
 
 If S4 is not done by the evening before the Week 7 lab, the Telegram message moves to Sprint 2 and alerts show on Shota's owner page only (`channel` = `screen`); S3 and S1 stay no matter what, because without the camera's alert and the resolve the value does not land.
+
+## The DECISIONS.md lines
+
+The boundary line is in `03-build/mvp-boundary.md`.
