@@ -59,4 +59,4 @@ Every missing rung has an owner and a day in `03-build/sprints/sprint-2.md`.
 
 ## 4. My person this week
 
-**The field-week person I am responsible for:** Director-4, founder, Kutaisi (log 04, test-plan tester 2) · **how and when the link reaches them:** I phone him on Wednesday, then send the production link on WhatsApp once it loads on a phone (rung 1, due Tuesday); on the call I ask whether his site cameras can stream to our software.
+**The field-week person I am responsible for:** Director-4, founder, Kutaisi (log 04, test-plan tester 2) · **how and when the link reaches them:** not reached yet. Rung 1 is not passed, so there is no production link to send. The day it loads on a phone, I phone him and then send the link on WhatsApp; on the call I ask whether his site cameras can stream to our software.
