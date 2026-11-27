@@ -14,3 +14,5 @@ Wk7 · Alerts reach the owner by a Telegram bot, not WhatsApp or SMS: a Telegram
 
 Wk7 · Gate open at rung 0: missing the production URL, the camera-to-resolved journey on it, owner_resolves_alert firing from production, the PostHog = database count, and the dashboard; owners and times in sprint-2.md · evidence: 03-build/sprints/sprint-2.md, 03-build/analytics/event-schema.md · owner: TT
 
+Wk7 · Gate demo runs on public construction videos instead of the C220 live stream, the browser helmet detector from feat/helmet-detection-demo now opens an alert with Open and Resolved, deployed at https://web-inky-five-8pqepadzuq.vercel.app with alerts in Neon and events in PostHog; the C220 stays for the field week. Changes the "running against the C220" clause of S3 under the Wk7 MVP boundary v2 line, which stays as written · evidence: 03-build/sprints/sprint-2.md (The gate), 03-build/analytics/event-schema.md (Live column), app/web/README.md on branch helmet-gate-demo · owner: TT
+

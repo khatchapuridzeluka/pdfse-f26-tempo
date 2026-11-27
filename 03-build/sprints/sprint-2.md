@@ -23,11 +23,13 @@ The Sprint 1 stories were written on 22 Nov, after we switched to the camera (MV
 
 | Rung | Reached? | Evidence: a link or a number | If not: owner, and by when |
 |---|---|---|---|
-| 1 Production URL loads on a phone | No | | LK, by Tue |
-| 2 Journey completes there | No | | GG + LK, by Thu |
-| 3 North star event in Activity, from production | No | | TT, by Fri |
-| 4 Counts reconcile | No | | TT, by Fri |
-| 5 Dashboard, linked in README | No | | TT, by Fri |
+| 1 Production URL loads on a phone | Partly | https://web-inky-five-8pqepadzuq.vercel.app loads publicly (checked 27 Nov from a laptop) | Phone on mobile data: LK or GG, at the next walk |
+| 2 Journey completes there | No | The journey works on public construction footage ("Use a video instead"), tested locally on 26 Nov | LK or GG walks it on a phone: video → alert → Open → Resolved |
+| 3 North star event in Activity, from production | Yes | `owner_resolves_alert` in PostHog Activity on 27 Nov, sent by the live server (test record `site_test`) | |
+| 4 Counts reconcile | No | Test alert so far: PostHog 1 = database 1 | TT, in the window of the phone walk (`event-schema.md`, Gate reconcile) |
+| 5 Dashboard, linked in README | Partly | "TEMPO gate: helmet alerts" with Trends, Funnel, Retention and the internal filter | TT: turn on the public link and put it in the README |
+
+**Gate change (27 Nov):** the gate demo runs on public construction videos instead of the C220's live stream, as our lecturer allowed; the C220 stays for the field week (see the DECISIONS.md line).
 
 ## Real hours before Lab 8
 

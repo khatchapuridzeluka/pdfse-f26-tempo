@@ -15,9 +15,9 @@ Owners of mid-sized construction companies pay fines and delay penalties for sim
 
 | Link | Status |
 |---|---|
-| Prototype | coming Week 5 |
-| Live product | coming Week 7 |
-| Analytics dashboard (PostHog) | coming Week 7 |
+| Prototype | Helmet detection demo (browser): https://rubikg6.github.io/tempo-helmet-web/ |
+| Live product | https://web-inky-five-8pqepadzuq.vercel.app (no site nearby: tap "Use a video instead" and pick a construction video) |
+| Analytics dashboard (PostHog) | "TEMPO gate: helmet alerts" is built (Trends, Funnel, Retention); public link coming once we turn on sharing |
 | 12-month model | coming Week 12 |
 | Pitch deck | coming Week 13 |
 | One-pager | coming Week 15 |
